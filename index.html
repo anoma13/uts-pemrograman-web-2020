@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FORMULIR</title>
+</head><br>
+<link rel="stylesheet" href="styles.css">
+
+<body background="background.jpg">
+    <fieldset>
+        <form onsubmit="event.preventDefault();onFormSubmit();previewImage();" autocomplete="off">
+            <img src="logo.png" width="250px" height="100px">
+            <div align="center">
+                <p class="text-formulir">FORMULIR</p>
+                <table>
+                    <tr>
+                        <td><b class="text">Nama Lengkap * </b></td>
+                        <td> : </td><b class="validation-error hide" id="validasi"></b>
+                        <td><input class="form-input" type="text" name="nama" id="nama" required></td>
+                    </tr>
+                    <td><b class="text">Tempat Lahir * </b></td>
+                    <td> : </td>
+                    <td><input class="form-input" type="text" name="tempat" id="tempat" required></td>
+                    <td><b class="text">&ensp;Tanggal Lahir * </b>
+                    <td> : </td>
+                    </td>
+                    <td><select class="form-input-tanggal" id="tanggal" name="tanggal" required>
+                            <option value="">-- tanggal --</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select></td>
+                    <td><select class="form-input-bulan" id="bulan" name="bulan" required>
+                            <option value="">-- bulan --</option>
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <option value="April">April</option>
+                            <option value="Mei">Mei</option>
+                            <option value="Juni">Juni</option>
+                            <option value="Juli">Juli</option>
+                            <option value="Agustus">Agustus</option>
+                            <option value="September">September</option>
+                            <option value="Oktober">Oktober</option>
+                            <option value="November">November</option>
+                            <option value="Desember">Desember</option>
+                        </select></td>
+                    <td><select class="form-input-tahun" id="tahun" name="tahun" required>
+                            <option value="">-- tahun --</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                            <option value="1988">1988</option>
+                            <option value="1987">1987</option>
+                            <option value="1986">1986</option>
+                            <option value="1985">1985</option>
+                            <option value="1984">1984</option>
+                            <option value="1983">1983</option>
+                            <option value="1982">1982</option>
+                            <option value="1981">1981</option>
+                            <option value="1980">1980</option>
+                            <option value="1979">1979</option>
+                            <option value="1978">1978</option>
+                            <option value="1977">1977</option>
+                            <option value="1976">1976</option>
+                            <option value="1975">1975</option>
+                            <option value="1974">1974</option>
+                            <option value="1973">1973</option>
+                            <option value="1972">1972</option>
+                            <option value="1971">1971</option>
+                            <option value="1970">1970</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">NIM * </b></td>
+                        <td> : </td>
+                        <td><input class="form-input" type="number" name="nim" id="nim" required></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">Jurusan * </b></td>
+                        <td> : </td>
+                        <td><select class="form-input-jurusan" name="jurusan" id="jurusan" required>
+                                <option value="">-- pilih jurusan --</option>
+                                <option value="Informatika">Informatika</option>
+                                <option value="Mesin">Mesin</option>
+                                <option value="Industri">Industri</option>
+                                <option value="Sipil">Sipil</option>
+                                <option value="Elektro">Elektro</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">Jenis Kelamin * </b></td>
+                        <td> : </td>
+                        <td>
+                            <input type="radio" name="jkel" id="jkel" value="Laki-laki" required><b
+                                class="text-jk">Laki-laki</b>
+                            <input type="radio" name="jkel" id="jkel" value="Perempuan"><b class="text-jk">Perempuan</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">Agama * </b></td>
+                        <td> : </td>
+                        <td>
+                            <select class="form-input-jurusan" name="agama" id="agama" required>
+                                <option value="">-- pilih agama --</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katholik">Katholik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Budha">Budha</option>
+                                <option value="Konghucu">Konghucu</option>
+                            </select><br></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">E-Mail * </b></td>
+                        <td> : </td>
+                        <td><input class="form-input" type="email" name="email" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">No Telepon </b></td>
+                        <td> : </td>
+                        <td><input class="form-input" type="number" name="tlpn" id="tlpn"></td>
+                    </tr>
+                    <tr>
+                        <td><b class="text">Unggah Foto </b></td>
+                        <td> : </td>
+                        <td><input type="file" name="foto" id="foto" /></td>
+                    </tr>
+
+                </table><br><br>
+                <input class="btn-simpan" type="submit" value="Simpan">
+                <input class="btn-reset" type="reset" value="Reset">
+            </div>
+        </form>
+
+    </fieldset><br><br>
+    <fieldset>
+        <table id="tampil">
+            <thead>
+                <tr>
+                    <p class="text-formulir">DATA</p>
+                    <th>Foto</th>
+                    <th>Nama Lengkap</th>
+                    <th>Tempat, Tgl Lahir</th>
+                    <th>NIM</th>
+                    <th>Jurusan</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Agama</th>
+                    <th>E-mail</th>
+                    <th>No Telepon</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </fieldset>
+</body><br>
+<footer class="foot">Create by : Wahyuli Dwiki Nanda_201810370311052</footer>
+
+</html>
+
+<script>
+    var selectedRow = null
+    var foto = new FileReader();
+    var tampilFoto = "";
+    var kel = "";
+
+    function onFormSubmit() {
+        if (validate()) {
+            var formData = readFormData();
+            if (selectedRow == null)
+                insertNewRecord(formData);
+            else
+                updateRecord(formData);
+            resetForm();
+        }
+    }
+
+    function readFormData() {
+        var formData = {};
+
+        d = new Date(document.getElementById("tanggal").value);
+        dt = d.getDate();
+        mn = d.getMonth();
+        mn++;
+        yy = d.getFullYear();
+
+        formData["tempat"] = document.getElementById("tempat").value;
+        formData["tanggal"] = document.getElementById("tanggal").value;
+        formData["bulan"] = document.getElementById("bulan").value;
+        formData["tahun"] = document.getElementById("tahun").value;
+        formData["nama"] = document.getElementById("nama").value;
+        formData["nim"] = document.getElementById("nim").value;
+        formData["jurusan"] = document.getElementById("jurusan").value;
+
+        for (i = 0; i < document.forms[0].length; i++) {
+            if (document.forms[0][i].checked) {
+                kel = document.forms[0][i].value;
+            }
+        }
+        formData["jkel"] = kel;
+        formData["agama"] = document.getElementById("agama").value;
+        formData["email"] = document.getElementById("email").value;
+        formData["tlpn"] = document.getElementById("tlpn").value;
+
+        return formData;
+    }
+
+    function previewImage() {
+        foto.readAsDataURL(document.getElementById("foto").files[0]);
+        foto.onload = function (foto) {
+            document.getElementById("foto-tampil").src = foto.target.result;
+        }
+    }
+
+
+    function insertNewRecord(data) {
+        var table = document.getElementById("tampil").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.length);
+
+
+        cell1 = newRow.insertCell(0);
+        cell1.innerHTML = `<img width="50px" height="70px" src="icon.png" id="foto-tampil"/>`;
+        cell2 = newRow.insertCell(1);
+        cell2.innerHTML = data.nama;
+        cell3 = newRow.insertCell(2);
+        cell3.innerHTML = data.tempat + " , " + data.tanggal + " " + data.bulan + " " + data.tahun;
+        cell4 = newRow.insertCell(3);
+        cell4.innerHTML = data.nim;
+        cell5 = newRow.insertCell(4);
+        cell5.innerHTML = data.jurusan;
+        cell6 = newRow.insertCell(5);
+        cell6.innerHTML = data.jkel;
+        cell6 = newRow.insertCell(6);
+        cell6.innerHTML = data.agama;
+        cell5 = newRow.insertCell(7);
+        cell5.innerHTML = data.email;
+        cell6 = newRow.insertCell(8);
+        cell6.innerHTML = data.tlpn;
+        cell7 = newRow.insertCell(9);
+        cell7.innerHTML = `<button class="btn-edit" onClick="onEdit(this)">Edit</button>
+                       <button class="btn-hapus" onClick="onDelete(this)">Hapus</button>`;
+    }
+
+    function resetForm() {
+        document.getElementById("nama").value = "";
+        document.getElementById("nim").value = "";
+        document.getElementById("jurusan").value = "";
+        document.getElementById("jkel").checked = false;
+        document.getElementById("tempat").value = "";
+        document.getElementById("tanggal").value = "";
+        document.getElementById("bulan").value = "";
+        document.getElementById("tahun").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("tlpn").value = "";
+        document.getElementById("agama").value = "";
+        selectedRow = null;
+    }
+
+    function onEdit(td) {
+        selectedRow = td.parentElement.parentElement;
+        var str = document.getElementById("tempat").value = selectedRow.cells[2].innerHTML;
+        var spl = str.split(" ");
+
+        document.getElementById("nama").value = selectedRow.cells[1].innerHTML;
+        document.getElementById("tempat").value = spl[0];
+        document.getElementById("tanggal").value = spl[2];
+        document.getElementById("bulan").value = spl[3];
+        document.getElementById("tahun").value = spl[4];
+        document.getElementById("nim").value = selectedRow.cells[3].innerHTML;
+        document.getElementById("jurusan").value = selectedRow.cells[4].innerHTML;
+        kel = selectedRow.cells[5].innerHTML;
+        document.getElementById("agama").value = selectedRow.cells[6].innerHTML;
+        document.getElementById("email").value = selectedRow.cells[7].innerHTML;
+        document.getElementById("tlpn").value = selectedRow.cells[8].innerHTML;
+    }
+    function updateRecord(formData) {
+        selectedRow.cells[1].innerHTML = formData.nama;
+        selectedRow.cells[2].innerHTML = formData.tempat + " , " + formData.tanggal + " " + formData.bulan + " " + formData.tahun;
+        selectedRow.cells[3].innerHTML = formData.nim;
+        selectedRow.cells[4].innerHTML = formData.jurusan;
+        selectedRow.cells[5].innerHTML = formData.jkel;
+        selectedRow.cells[6].innerHTML = formData.agama;
+        selectedRow.cells[7].innerHTML = formData.email;
+        selectedRow.cells[8].innerHTML = formData.tlpn;
+    }
+
+    function onDelete(td) {
+        if (confirm('Apakah anda ingin menghapus data ?')) {
+            row = td.parentElement.parentElement;
+            document.getElementById("tampil").deleteRow(row.rowIndex);
+            resetForm();
+        }
+    }
+    function validate() {
+        isValid = true;
+        if (document.getElementById("nama").value == "") {
+            isValid = false;
+            document.getElementById("validasi").classList.remove("hide");
+        } else {
+            isValid = true;
+            if (!document.getElementById("validasi").classList.contains("hide"))
+                document.getElementById("validasi").classList.add("hide");
+        }
+        return isValid;
+    }
+</script>
